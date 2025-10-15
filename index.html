@@ -3,10 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
     <title>Form Validator</title>
   </head>
   <body>
-    <script src="/JavaScript/script.js"></script>
+    <div class="container">
+      <form id="registration-form">
+        <h1>Register Form</h1>
+
+        <!-- USERNAME -->
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter Username" />
+          <small></small>
+        </div>
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter Email" />
+          <small></small>
+        </div>
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" />
+          <small></small>
+        </div>
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="confirm-password">Password</label>
+          <input
+            type="confirm-password"
+            id="confirm-password"
+            placeholder="Confirm Password" />
+          <small></small>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    <script src="CSS/style.css"></script>
   </body>
 </html>
