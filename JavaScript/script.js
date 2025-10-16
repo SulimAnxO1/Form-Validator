@@ -8,6 +8,7 @@ const confirmPassword = document.getElementById("confirmPassword");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+
   const isRequiredValid = checkRequired([
     username,
     email,
