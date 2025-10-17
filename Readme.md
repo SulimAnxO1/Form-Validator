@@ -1,6 +1,6 @@
 # ✅ Form Validator
 
-A modern and responsive **Form Validation App** built with HTML, CSS, and JavaScript.  
+A modern and responsive **Form Validation** built with **HTML**, **CSS**, and **JavaScript**.  
 It ensures that user input is valid before submission — providing real-time error feedback for each field.
 
 ---
