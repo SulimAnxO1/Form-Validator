@@ -1,4 +1,4 @@
-//  DOM ELEMENTS
+// DOM ELEMENTS
 
 const form = document.getElementById("registration-form");
 const username = document.getElementById("username");
@@ -15,7 +15,65 @@ form.addEventListener("submit", function (e) {
     password,
     confirmPassword,
   ]);
+
+  let isFormValid = isRequiredValid;
+
+  if (isRequiredValid) {
+    const isUsernameValid = checkLength(username, 2, 15);
+    const isEmailValid = checkEmail(email);
+    const isPasswordValid = checkLength(password, 6, 25);
+    const isPasswordsMatch = checkPasswordsMatch(password, confirmPassword);
+
+    isFormValid =
+      isUsernameValid && isEmailValid && isPasswordValid && isPasswordsMatch;
+  }
+
+  if (isFormValid) {
+    alert("Registration successful!");
+    form.reset();
+    document.querySelectorAll(".form-group").forEach((group) => {
+      group.className = "form-group";
+    });
+  }
 });
+
+function checkPasswordsMatch(input1, input2) {
+  if (input1.value !== input2.value) {
+    showError(input2, "Passwords do not match");
+    return false;
+  }
+  return true;
+}
+
+function checkEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailRegex.test(email.value.trim())) {
+    showSuccess(email);
+    return true;
+  } else {
+    showError(email, "Email is not valid");
+    return false;
+  }
+}
+
+function checkLength(input, min, max) {
+  if (input.value.length < min) {
+    showError(
+      input,
+      `${formatFieldName(input)} must be at least ${min} characters.`
+    );
+    return false;
+  } else if (input.value.length > max) {
+    showError(
+      input,
+      `${formatFieldName(input)} must be less than ${max} characters.`
+    );
+    return false;
+  } else {
+    showSuccess(input);
+    return true;
+  }
+}
 
 function checkRequired(inputArray) {
   let isValid = true;
@@ -28,6 +86,7 @@ function checkRequired(inputArray) {
       showSuccess(input);
     }
   });
+
   return isValid;
 }
 
