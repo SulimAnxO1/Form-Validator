@@ -7,7 +7,7 @@ It ensures that user input is valid before submission providing real-time error 
 
 ## 🌐 Live Demo
 
-👉 [Live Demo](https://form-validator-x01.netlify.app/)
+👉 [Live Demo]()
 
 ---
 
@@ -29,6 +29,6 @@ It ensures that user input is valid before submission providing real-time error 
 
 ## 🛠️ Technologies Used
 
-- 🧱 HTML
-- 🎨 CSS
-- ⚡ JavaScript
+- 🧱 **HTML**
+- 🎨 **CSS**
+- ⚡ **JavaScript**
