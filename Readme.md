@@ -5,12 +5,6 @@ It ensures that user input is valid before submission providing real-time error 
 
 ---
 
-## 🌐 Live Demo
-
-👉 [Live Demo]()
-
----
-
 ## 🖼️ Preview
 
 ![Preview](/Image/preview.png)
